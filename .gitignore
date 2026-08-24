@@ -1,2 +1,3 @@
 venv
 cifar-10
+__pycache__/
