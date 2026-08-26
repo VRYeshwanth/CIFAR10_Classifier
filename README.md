@@ -76,12 +76,13 @@ cifar-10/
 
 ## 📦 Dataset
 
-This project uses the CIFAR-10 training dataset. The original training set is split into three subsets:
+The original CIFAR-10 training set was split into stratified
+training, validation, and test sets:
 
 - Train: 40,000 images
 - Validation: 10,000 images
 - Test: 10,000 images
 
-The original CIFAR-10 test set is not used in this project.
+The processed dataset is available as a GitHub Release:
 
-> Note: Since the test set is derived from the original training data, these results should not be directly compared with benchmarks that use the official CIFAR-10 test set.
+[Download Dataset](https://github.com/VRYeshwanth/CIFAR10_Classifier/releases/tag/v1.0.0)
