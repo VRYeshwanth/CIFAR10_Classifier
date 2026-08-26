@@ -40,17 +40,6 @@ class CIFAR10Dataset(Dataset):
         return image, label
 
 
-# Function to split dataset into train, validation and test datasets
-def split_dataset(dataset, train_size, val_size, test_size):
-
-    train_dataset, val_dataset, test_dataset = random_split(
-        dataset,
-        [train_size, val_size, test_size]
-    )
-
-    return train_dataset, val_dataset, test_dataset
-
-
 # Function to create dataloaders for the dataset
 def create_dataloader(dataset, batch_size, shuffle):
 
