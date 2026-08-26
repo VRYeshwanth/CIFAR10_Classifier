@@ -1,4 +1,5 @@
 from torch.utils.data import Dataset, DataLoader, random_split
+from torchvision import transforms
 from PIL import Image
 
 import os
@@ -15,6 +16,16 @@ class_to_idx = {
     "ship": 8,
     "truck": 9
 }
+
+train_transforms = transforms.Compose([
+    transforms.RandomCrop(32, padding=4),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor()
+])
+
+val_transforms = transforms.Compose([
+    transforms.ToTensor()
+])
 
 # Custom Dataset Definition
 class CIFAR10Dataset(Dataset):
